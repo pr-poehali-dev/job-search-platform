@@ -5,6 +5,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Login from "./pages/auth/Login";
+import Register from "./pages/auth/Register";
+import ForgotPassword from "./pages/auth/ForgotPassword";
+import ResetPassword from "./pages/auth/ResetPassword";
 import DashboardLayout from "./components/dashboard/DashboardLayout";
 import ApplicantDashboard from "./pages/dashboard/ApplicantDashboard";
 import EmployerDashboard from "./pages/dashboard/EmployerDashboard";
@@ -19,6 +23,12 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+
+          {/* Страницы аутентификации */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/reset-password" element={<ForgotPassword />} />
+          <Route path="/new-password" element={<ResetPassword />} />
 
           {/* Личный кабинет соискателя */}
           <Route
