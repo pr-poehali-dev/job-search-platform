@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import StatsSection from "@/components/StatsSection";
 import FeaturedJobs from "@/components/FeaturedJobs";
@@ -15,6 +16,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Добавляем хедер */}
+      <Header />
+
       {/* Hero секция с поиском */}
       <div className="relative">
         <HeroSection onSearch={handleSearch} />
